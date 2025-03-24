@@ -1,53 +1,26 @@
 ---
 
-## **1. HTML (HyperText Markup Language)**
-
-HTML은 웹페이지의 구조를 정의하는 마크업 언어입니다. 마크업 언어란, 문서의 구조를 태그(tag)로 감싸서 지정하는 언어입니다.
-
-### **1.1 HTML의 기본 구조**
-다음은 마크다운 문법을 사용하여 변환한 HTML 설명입니다.  
-
-```markdown
 ### **1.1 HTML의 기본 구조**
 
-```html
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 기본 구조</title>
-</head>
-<body>
-    <h1>안녕하세요</h1>
-    <p>이것은 HTML 문서입니다.</p>
-</body>
-</html>
-```
-
-- `<!DOCTYPE html>`: HTML5 문서임을 선언  
-- `<html>`: 웹 문서의 루트 요소  
-- `<head>`: 문서의 메타 정보 포함  
-- `<body>`: 화면에 표시될 내용을 포함  
+- `<!DOCTYPE html>`: HTML5 문서임을 선언
+- `<html>`: 웹 문서의 루트 요소
+- `<head>`: 문서의 메타 정보 포함
+- `<body>`: 화면에 표시될 내용을 포함
 
 ### **1.2 HTML 주요 태그**
 
-- **텍스트 관련 태그**  
-  - `<h1>~<h6>`: 제목 태그  
-  - `<p>`: 문단(Paragraph) 태그  
-  - `<a href="https://example.com">링크</a>`: 하이퍼링크  
+- **텍스트 관련 태그**
+    - `<h1>~<h6>`: 제목 태그
+    - `<p>`: 문단(Paragraph) 태그
+    - `<a href="https://example.com">링크</a>`: 하이퍼링크
+- **레이아웃 관련 태그**
+    - `<div>`: 블록 요소로 구획 나누기
+    - `<span>`: 인라인 요소로 텍스트 일부 스타일 지정
+- **입력 폼 관련 태그**
+    - `<input type="text">`: 텍스트 입력
+    - `<button>버튼</button>`: 버튼 생성
+    - `<form>`: 사용자 입력을 서버로 제출
 
-- **레이아웃 관련 태그**  
-  - `<div>`: 블록 요소로 구획 나누기  
-  - `<span>`: 인라인 요소로 텍스트 일부 스타일 지정  
-
-- **입력 폼 관련 태그**  
-  - `<input type="text">`: 텍스트 입력  
-  - `<button>버튼</button>`: 버튼 생성  
-  - `<form>`: 사용자 입력을 서버로 제출  
-```
-
-이제 마크다운 문서로 쉽게 활용할 수 있습니다! 😊
 ---
 
 ## **2. CSS (Cascading Style Sheets)**
@@ -147,13 +120,10 @@ console.log(message); // 콘솔에 출력
 ### **1.1 함수 선언식 (Function Declaration)**
 
 ```jsx
-javascript
-코드 복사
 function greet(name) {
     return `안녕하세요, ${name}님!`;
 }
 console.log(greet("철수")); // 출력: "안녕하세요, 철수님!"
-
 ```
 
 ✔ **특징**
@@ -166,13 +136,10 @@ console.log(greet("철수")); // 출력: "안녕하세요, 철수님!"
 ### **1.2 함수 표현식 (Function Expression)**
 
 ```jsx
-javascript
-코드 복사
 const greet = function(name) {
     return `안녕하세요, ${name}님!`;
 };
 console.log(greet("영희")); // 출력: "안녕하세요, 영희님!"
-
 ```
 
 ✔ **특징**
@@ -185,11 +152,8 @@ console.log(greet("영희")); // 출력: "안녕하세요, 영희님!"
 ### **1.3 화살표 함수 (Arrow Function, ES6)**
 
 ```jsx
-javascript
-코드 복사
 const greet = (name) => `안녕하세요, ${name}님!`;
 console.log(greet("민수")); // 출력: "안녕하세요, 민수님!"
-
 ```
 
 ✔ **특징**
@@ -201,9 +165,7 @@ console.log(greet("민수")); // 출력: "안녕하세요, 민수님!"
 **💡 예제: 화살표 함수의 다양한 형태**
 
 ```jsx
-javascript
-코드 복사
-// 매개변수가 여러 개일 때
+/ 매개변수가 여러 개일 때
 const add = (a, b) => a + b;
 console.log(add(3, 4)); // 출력: 7
 
@@ -216,7 +178,6 @@ console.log(introduce("철수", 25)); // 출력: "이름: 철수, 나이: 25"
 // 매개변수가 없을 때
 const sayHello = () => "안녕하세요!";
 console.log(sayHello()); // 출력: "안녕하세요!"
-
 ```
 
 ---
@@ -226,14 +187,11 @@ console.log(sayHello()); // 출력: "안녕하세요!"
 함수의 매개변수에 기본값을 설정하면, 호출할 때 인자를 생략해도 기본값이 사용됩니다.
 
 ```jsx
-javascript
-코드 복사
 function greet(name = "손님") {
     return `안녕하세요, ${name}님!`;
 }
 console.log(greet()); // 출력: "안녕하세요, 손님님!"
 console.log(greet("철수")); // 출력: "안녕하세요, 철수님!"
-
 ```
 
 ---
@@ -243,12 +201,9 @@ console.log(greet("철수")); // 출력: "안녕하세요, 철수님!"
 즉시 실행 함수(IIFE, Immediately Invoked Function Expression)는 선언과 동시에 실행되는 함수입니다.
 
 ```jsx
-javascript
-코드 복사
 (function() {
     console.log("이 함수는 즉시 실행됩니다!");
 })(); // 출력: "이 함수는 즉시 실행됩니다!"
-
 ```
 
 ✔ **특징**
@@ -263,8 +218,6 @@ javascript
 함수를 다른 함수의 인자로 전달하여 실행할 수 있습니다.
 
 ```jsx
-javascript
-코드 복사
 function processUserInput(callback) {
     let name = "철수";
     callback(name);
@@ -274,7 +227,6 @@ processUserInput(function(name) {
     console.log(`안녕하세요, ${name}님!`);
 });
 // 출력: "안녕하세요, 철수님!"
-
 ```
 
 ✔ **특징**
@@ -285,12 +237,9 @@ processUserInput(function(name) {
 **💡 예제: setTimeout과 콜백 함수**
 
 ```jsx
-javascript
-코드 복사
 setTimeout(() => {
     console.log("3초 후 실행됩니다!");
 }, 3000);
-
 ```
 
 ---
@@ -300,26 +249,20 @@ setTimeout(() => {
 함수는 `return` 키워드를 사용하여 값을 반환할 수 있습니다.
 
 ```jsx
-javascript
-코드 복사
 function multiply(a, b) {
     return a * b;
 }
 let result = multiply(5, 2);
 console.log(result); // 출력: 10
-
 ```
 
 **💡 return 없이 함수 실행**
 
 ```jsx
-javascript
-코드 복사
 function noReturn() {
     console.log("이 함수는 값을 반환하지 않습니다.");
 }
 console.log(noReturn()); // 출력: "이 함수는 값을 반환하지 않습니다." + undefined
-
 ```
 
 ✔ **특징**
@@ -333,14 +276,11 @@ console.log(noReturn()); // 출력: "이 함수는 값을 반환하지 않습니
 자기 자신을 호출하는 함수로, 반복적인 작업을 수행할 때 사용됩니다.
 
 ```jsx
-javascript
-코드 복사
 function factorial(n) {
     if (n === 1) return 1;
     return n * factorial(n - 1);
 }
 console.log(factorial(5)); // 출력: 120
-
 ```
 
 ✔ **특징**
@@ -355,8 +295,6 @@ console.log(factorial(5)); // 출력: 120
 `this`는 함수가 호출되는 방식에 따라 다르게 동작합니다.
 
 ```jsx
-javascript
-코드 복사
 const user = {
     name: "철수",
     greet: function() {
@@ -375,8 +313,6 @@ user.greet(); // 출력: "안녕하세요, 철수님!"
 **💡 화살표 함수에서 this**
 
 ```jsx
-javascript
-코드 복사
 const user = {
     name: "철수",
     greet: () => {
@@ -384,7 +320,6 @@ const user = {
     }
 };
 user.greet(); // 출력: "안녕하세요, undefined님!" (this가 윈도우 객체를 가리킴)
-
 ```
 
 ---
