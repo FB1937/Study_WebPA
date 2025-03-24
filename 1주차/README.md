@@ -1,6 +1,19 @@
----
-
 ### **1.1 HTML의 기본 구조**
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 기본 구조</title>
+</head>
+<body>
+    <h1>안녕하세요</h1>
+    <p>이것은 HTML 문서입니다.</p>
+</body>
+</html>
+```
 
 - `<!DOCTYPE html>`: HTML5 문서임을 선언
 - `<html>`: 웹 문서의 루트 요소
