@@ -1,0 +1,15 @@
+.dark-toggle {
+    background: none;
+    border: 2px solid #4e54c8;
+    color: #4e54c8;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-toggle:hover {
+    background-color: #4e54c8;
+    color: white;
+}

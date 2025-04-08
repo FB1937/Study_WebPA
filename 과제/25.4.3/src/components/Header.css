@@ -1,0 +1,42 @@
+.header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.title-box {
+    z-index: 1;
+    text-align: center;
+}
+
+.glow-text {
+    font-size: 3.5rem;
+    animation: glow 2s ease-in-out infinite alternate;
+    font-weight: bold;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #0ff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #00f;
+    }
+}
+
+.sub {
+    font-size: 1.3rem;
+    opacity: 0.85;
+}
