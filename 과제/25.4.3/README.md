@@ -1,6 +1,7 @@
 ## 🎯 Ai를 이용한 자기소개 페이지
 ![Image](https://github.com/user-attachments/assets/35222d85-53fe-4f75-924e-9ce564066901)
 
+
 ### 1. **Vite + React 프로젝트 생성**
 
 - `npm create vite@latest` 명령어로 프로젝트 생성
