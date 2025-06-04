@@ -652,3 +652,44 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
+---
+
+# nginx
+
+## nginx.conf
+
+```
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen 8080;
+        server_name localhost;  # 또는 yourdomain.com 또는 서버 IP
+
+        # React build된 정적 파일 위치
+        root html;
+        index index.html;
+
+        # React 라우팅 지원
+        location / {
+            try_files $uri /index.html;
+        }
+
+        # 에러 페이지
+        error_page   500 502 503 504  /50x.html;
+        location = /50x.html {
+            root   /usr/share/nginx/html;  # 기본 위치 또는 필요 시 수정
+        }
+    }
+}
+
+```
